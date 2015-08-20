@@ -1,0 +1,30 @@
+<template name="hype_table">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Derniere update</th>
+            <th>Nombre</th>
+            <th>dernier up</th>
+            <th>commentaire</th>
+            <th>Update !</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="2">{{> fromNow date}}</td>
+            <td>
+                <button class="btn btn-success" type="button" style="cursor: default;">
+                Hype <span class="badge">{{number}}</span>
+                </button>
+            </td>
+            <td>{{> username user=user}}</td>
+            <td>{{commentaire}}</td>
+            <td>
+                {{#if currentUser}}
+                    <button type="button" class="btn btn-info update" data-hype="{{_id}}" data-toggle="modal" data-target="#myModal">++</button>
+                {{/if}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</template>

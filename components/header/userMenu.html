@@ -1,0 +1,13 @@
+<template name="userMenu">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Bonjour {{> username user=currentUser}}</a></li>
+            <li role="separator" class="divider"></li>
+            <li style="text-align: center">{{>atNavButton}}</li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{{pathFor 'project.new'}}">Ajouter un projet</a></li>
+            <li><a href="{{pathFor 'project.show' data=currentUser}}">Gerer ces projet</a></li>
+        </ul>
+    </li>
+</template>

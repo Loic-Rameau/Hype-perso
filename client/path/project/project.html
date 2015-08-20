@@ -1,0 +1,24 @@
+<template name="project">
+    <h2>Projets : {{nom}}</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Qui ?</th>
+                <th>Quoi ?</th>
+                <th>Quand ?</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#each comments}}
+            <tr>
+                <td>{{> username user=user}}</td>
+                <td>{{comment}}</td>
+                <td>{{> fromNow when}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+    <div style="width: 100%;height: 400px;">
+        {{> charts_line height=400 id="chartsTest" hype=getData}}
+    </div>
+</template>
