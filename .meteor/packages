@@ -21,3 +21,6 @@ softwarerero:accounts-t9n
 twbs:bootstrap
 reactive-var
 less
+accounts-facebook
+service-configuration
+accounts-github
