@@ -10,6 +10,21 @@
         </tr>
         </thead>
         <tbody>
+        {{#if preview}}
+            <tr>
+                <td rowspan="2">{{> fromNow ''}}</td>
+                <td>
+                    <button class="btn btn-success" type="button" style="cursor: default;">
+                        Hype <span class="badge">32</span>
+                    </button>
+                </td>
+                <td>{{> username user=currentUser}}</td>
+                <td>Un jolie commentaire</td>
+                <td>
+                    <button type="button" class="btn btn-info update">++</button>
+                </td>
+            </tr>
+        {{else}}
         <tr>
             <td rowspan="2">{{> fromNow date}}</td>
             <td>
@@ -20,11 +35,12 @@
             <td>{{> username user=user}}</td>
             <td>{{commentaire}}</td>
             <td>
-                {{#if currentUser}}
+                {{#if canUp}}
                     <button type="button" class="btn btn-info update" data-hype="{{_id}}" data-toggle="modal" data-target="#myModal">++</button>
                 {{/if}}
             </td>
         </tr>
+        {{/if}}
         </tbody>
     </table>
 </template>

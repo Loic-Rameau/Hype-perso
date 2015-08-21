@@ -7,6 +7,9 @@ if(Meteor.isClient){
             return Comments.findOne({hype: hype._id}, {sort: {when: -1}});
     }
     Template.hype_table.helpers({
+        preview:function(){
+            return Session.get("preview");
+        },
         number: function () {
             if(this.data !== null)
                 return Comments.find({hype: this.data._id}).count();
@@ -33,6 +36,9 @@ if(Meteor.isClient){
             } else {
                 return "";
             }
+        },
+        canUp:function(){
+            return this.members.contains(Meteor.userId());
         }
     });
 }

@@ -7,19 +7,24 @@ if(Meteor.isClient) {
             return this.link != "";
         },
         getData: function(){
-            return {
-                _id: this._id
-            };
+            return this;
+        },
+        canUp:function(){
+            return this.members.contains(Meteor.userId());
         }
     });
     Template.hype.events({
         "click .update": function (event) {
-            Session.set("hype", this);
+            if(!Session.get("preview") && this.members.contains(Meteor.userId())) {
+                Session.set("hype", this);
+            }
         },
         "click .link": function (event) {
             var el = $(event.target).parent();
             window.open(el.data("link"));
-            Meteor.call("addComment", "Baited by the video", this);
+            if(!Session.get("preview") && this.members.contains(Meteor.userId())) {
+                Meteor.call("addComment", this.message, this);
+            }
         }
     });
 }

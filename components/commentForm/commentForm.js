@@ -16,10 +16,12 @@ if(Meteor.isClient) {
     });
     Template.commentForm.events({
         "click button[type='submit']": function (event) {
-            var comment = $("#comment");
-            var com = comment.val();
-            Meteor.call("addComment", com, Session.get("hype").data);
-            comment.val("");
+            if(!Session.get("preview")){
+                var comment = $("#comment");
+                var com = comment.val();
+                Meteor.call("addComment", com, Session.get("hype").data);
+                comment.val("");
+            }
         }
     });
 }

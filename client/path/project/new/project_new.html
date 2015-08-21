@@ -1,122 +1,132 @@
 <template name="project_new">
-    <h2>Nouveau Projet</h2>
-    <form class="project_new">
-        <div class="form-group">
-            <label for="nom">Nom :</label>
-            <input type="text" name="nom" class="text form-control" id="nom" placeholder="Projet">
+    <div id="project_new">
+        <h2>Nouveau Projet</h2>
+        <form class="project_new">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" class="text form-control" id="nom" placeholder="Projet">
+            </div>
+            <div class="form-group">
+                <label for="icon">Icons :</label>
+                <select class="selectpicker" data-style="btn-info" data-width="100%" name="icon" id="icon">
+                    <option data-icon="glyphicon-heart" value="glyphicon-heart">heart</option>
+                    <option data-icon="glyphicon-asterisk" value="glyphicon-asterisk">asterisk</option>
+                    <option data-icon="glyphicon-plus" value="glyphicon-plus">plus</option>
+                    <option data-icon="glyphicon-eur" value="glyphicon-eur">eur</option>
+                    <option data-icon="glyphicon-minus" value="glyphicon-minus">minus</option>
+                    <option data-icon="glyphicon-cloud" value="glyphicon-cloud">cloud</option>
+                    <option data-icon="glyphicon-envelope" value="glyphicon-envelope">envelope</option>
+                    <option data-icon="glyphicon-glass" value="glyphicon-glass">glass</option>
+                    <option data-icon="glyphicon-music" value="glyphicon-music">music</option>
+                    <option data-icon="glyphicon-star" value="glyphicon-star">star</option>
+                    <option data-icon="glyphicon-star-empty" value="glyphicon-star-empty">star-empty</option>
+                    <option data-icon="glyphicon-user" value="glyphicon-user">user</option>
+                    <option data-icon="glyphicon-film" value="glyphicon-film">film</option>
+                    <option data-icon="glyphicon-th-large" value="glyphicon-th-large">th-large</option>
+                    <option data-icon="glyphicon-th" value="glyphicon-th">th</option>
+                    <option data-icon="glyphicon-th-list" value="glyphicon-th-list">th-list</option>
+                    <option data-icon="glyphicon-ok" value="glyphicon-ok">ok</option>
+                    <option data-icon="glyphicon-remove" value="glyphicon-remove">remove</option>
+                    <option data-icon="glyphicon-zoom-in" value="glyphicon-zoom-in">zoom-in</option>
+                    <option data-icon="glyphicon-zoom-out" value="glyphicon-zoom-out">zoom-out</option>
+                    <option data-icon="glyphicon-zoom-out" value="glyphicon-zoom-out">zoom-out</option>
+                    <option data-icon="glyphicon-off" value="glyphicon-off">off</option>
+                    <option data-icon="glyphicon-signal" value="glyphicon-signal">signal</option>
+                    <option data-icon="glyphicon-cog" value="glyphicon-cog">cog</option>
+                    <option data-icon="glyphicon-trash" value="glyphicon-trash">trash</option>
+                    <option data-icon="glyphicon-home" value="glyphicon-home">home</option>
+                    <option data-icon="glyphicon-file" value="glyphicon-file">file</option>
+                    <option data-icon="glyphicon-time" value="glyphicon-time">time</option>
+                    <option data-icon="glyphicon-road" value="glyphicon-road">road</option>
+                    <option data-icon="glyphicon-download-alt" value="glyphicon-download-alt">download-alt</option>
+                    <option data-icon="glyphicon-download" value="glyphicon-download">download-alt</option>
+                    <option data-icon="glyphicon-upload" value="glyphicon-upload">upload</option>
+                    <option data-icon="glyphicon-play-circle" value="glyphicon-play-circle">play-circle</option>
+                    <option data-icon="glyphicon-repeat" value="glyphicon-repeat">repeat</option>
+                    <option data-icon="glyphicon-refresh" value="glyphicon-refresh">refresh</option>
+                    <option data-icon="glyphicon-list-alt" value="glyphicon-list-alt">list-alt</option>
+                    <option data-icon="glyphicon-lock" value="glyphicon-lock">lock</option>
+                    <option data-icon="glyphicon-flag" value="glyphicon-flag">flag</option>
+                    <option data-icon="glyphicon-headphones" value="glyphicon-headphones">headphones</option>
+                    <option data-icon="glyphicon-qrcode" value="glyphicon-qrcode">qrcode</option>
+                    <option data-icon="glyphicon-barcode" value="glyphicon-barcode">barcode</option>
+                    <option data-icon="glyphicon-tag" value="glyphicon-tag">tag</option>
+                    <option data-icon="glyphicon-tags" value="glyphicon-tags">tags</option>
+                    <option data-icon="glyphicon-book" value="glyphicon-book">book</option>
+                    <option data-icon="glyphicon-bookmark" value="glyphicon-bookmark">bookmark</option>
+                    <option data-icon="glyphicon-print" value="glyphicon-print">print</option>
+                    <option data-icon="glyphicon-camera" value="glyphicon-camera">camera</option>
+                    <option data-icon="glyphicon-list" value="glyphicon-list">list</option>
+                    <option data-icon="glyphicon-indent-left" value="glyphicon-indent-left">indent-left</option>
+                    <option data-icon="glyphicon-indent-right" value="glyphicon-indent-right">indent-right</option>
+                    <option data-icon="glyphicon-facetime-video" value="glyphicon-facetime-video">facetime-video</option>
+                    <option data-icon="glyphicon-picture" value="glyphicon-picture">picture</option>
+                    <option data-icon="glyphicon-map-marker" value="glyphicon-map-marker">map-marker</option>
+                    <option data-icon="glyphicon-adjust" value="glyphicon-adjust">adjust</option>
+                    <option data-icon="glyphicon-tint" value="glyphicon-tint">tint</option>
+                    <option data-icon="glyphicon-edit" value="glyphicon-edit">edit</option>
+                    <option data-icon="glyphicon-share" value="glyphicon-share">share</option>
+                    <option data-icon="glyphicon-check" value="glyphicon-check">check</option>
+                    <option data-icon="glyphicon-move" value="glyphicon-move">move</option>
+                    <option data-icon="glyphicon-step-backward" value="glyphicon-step-backward">step-backward</option>
+                    <option data-icon="glyphicon-fast-backward" value="glyphicon-fast-backward">fast-backward</option>
+                    <option data-icon="glyphicon-backward" value="glyphicon-backward">backward</option>
+                    <option data-icon="glyphicon-play" value="glyphicon-play">play</option>
+                    <option data-icon="glyphicon-pause" value="glyphicon-pause">pause</option>
+                    <option data-icon="glyphicon-stop" value="glyphicon-stop">stop</option>
+                    <option data-icon="glyphicon-forward" value="glyphicon-forward">forward</option>
+                    <option data-icon="glyphicon-fast-forward" value="glyphicon-fast-forward">fast-forward</option>
+                    <option data-icon="glyphicon-step-forward" value="glyphicon-step-forward">step-forward</option>
+                    <option data-icon="glyphicon-eject" value="glyphicon-eject">eject</option>
+                    <option data-icon="glyphicon-screenshot" value="glyphicon-screenshot">screenshot</option>
+                    <option data-icon="glyphicon-share-alt" value="glyphicon-share-alt">share-alt</option>
+                    <option data-icon="glyphicon-exclamation-sign" value="glyphicon-exclamation-sign">exclamation-sign</option>
+                    <option data-icon="glyphicon-gift" value="glyphicon-gift">gift</option>
+                    <option data-icon="glyphicon-leaf" value="glyphicon-leaf">leaf</option>
+                    <option data-icon="glyphicon-fire" value="glyphicon-fire">fire</option>
+                    <option data-icon="glyphicon-eye-open" value="glyphicon-eye-open">eye-open</option>
+                    <option data-icon="glyphicon-eye-close" value="glyphicon-eye-close">eye-close</option>
+                    <option data-icon="glyphicon-warning-sign" value="glyphicon-warning-sign">warning-sign</option>
+                    <option data-icon="glyphicon-plane" value="glyphicon-plane">plane</option>
+                    <option data-icon="glyphicon-calendar" value="glyphicon-calendar">calendar</option>
+                    <option data-icon="glyphicon-random" value="glyphicon-random">random</option>
+                    <option data-icon="glyphicon-comment" value="glyphicon-comment">comment</option>
+                    <option data-icon="glyphicon-magnet" value="glyphicon-magnet">magnet</option>
+                    <option data-icon="glyphicon-retweet" value="glyphicon-retweet">retweet</option>
+                    <option data-icon="glyphicon-shopping-cart" value="glyphicon-shopping-cart">shopping-cart</option>
+                    <option data-icon="glyphicon-folder-close" value="glyphicon-folder-close">folder-close</option>
+                    <option data-icon="glyphicon-folder-open" value="glyphicon-folder-open">folder-open</option>
+                    <option data-icon="glyphicon-hdd" value="glyphicon-hdd">hdd</option>
+                    <option data-icon="glyphicon-bullhorn" value="glyphicon-bullhorn">bullhorn</option>
+                    <option data-icon="glyphicon-bell" value="glyphicon-bell">bell</option>
+                    <option data-icon="glyphicon-certificate" value="glyphicon-certificate">certificate</option>
+                    <option data-icon="glyphicon-globe" value="glyphicon-globe">globe</option>
+                    <option data-icon="glyphicon-wrench" value="glyphicon-wrench">wrench</option>
+                    <option data-icon="glyphicon-send" value="glyphicon-send">send</option>
+                    <option data-icon="glyphicon-cutlery" value="glyphicon-cutlery">cutlery</option>
+                    <option data-icon="glyphicon-tower" value="glyphicon-tower">tower</option>
+                    <option data-icon="glyphicon-grain" value="glyphicon-grain">grain</option>
+                    <option data-icon="glyphicon-sunglasses" value="glyphicon-sunglasses">sunglasses</option>
+                    <option data-icon="glyphicon-education" value="glyphicon-education">education</option>
+                    <option data-icon="glyphicon-ice-lolly-tasted" value="glyphicon-ice-lolly-tasted">ice-lolly-tasted</option>
+                    <option data-icon="glyphicon-ice-lolly" value="glyphicon-ice-lolly">ice-lolly</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="link">Lien</label>
+                <input type="text" name="link" id="link" class="text form-control" placeholder="http://youtube.com/w?=qsdqnda ou tout autre lien web valide">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <input type="text" name="message" id="message" class="text form-control" placeholder="Message a enregistrer quand on click sur le lien">
+            </div>
+            <button type="submit" class="btn btn-success form-control">
+                Valider
+            </button>
+        </form>
+        <h2>Preview :</h2>
+        <div class="preview">
+            {{> hype getData preview=true}}
         </div>
-        <div class="form-group">
-            <label for="icon">Icons :</label>
-            <select class="selectpicker" data-style="btn-info" data-width="100%" name="icon" id="icon">
-                <option data-icon="glyphicon-heart" value="glyphicon-heart">heart</option>
-                <option data-icon="glyphicon-asterisk" value="glyphicon-asterisk">asterisk</option>
-                <option data-icon="glyphicon-plus" value="glyphicon-plus">plus</option>
-                <option data-icon="glyphicon-eur" value="glyphicon-eur">eur</option>
-                <option data-icon="glyphicon-minus" value="glyphicon-minus">minus</option>
-                <option data-icon="glyphicon-cloud" value="glyphicon-cloud">cloud</option>
-                <option data-icon="glyphicon-envelope" value="glyphicon-envelope">envelope</option>
-                <option data-icon="glyphicon-glass" value="glyphicon-glass">glass</option>
-                <option data-icon="glyphicon-music" value="glyphicon-music">music</option>
-                <option data-icon="glyphicon-star" value="glyphicon-star">star</option>
-                <option data-icon="glyphicon-star-empty" value="glyphicon-star-empty">star-empty</option>
-                <option data-icon="glyphicon-user" value="glyphicon-user">user</option>
-                <option data-icon="glyphicon-film" value="glyphicon-film">film</option>
-                <option data-icon="glyphicon-th-large" value="glyphicon-th-large">th-large</option>
-                <option data-icon="glyphicon-th" value="glyphicon-th">th</option>
-                <option data-icon="glyphicon-th-list" value="glyphicon-th-list">th-list</option>
-                <option data-icon="glyphicon-ok" value="glyphicon-ok">ok</option>
-                <option data-icon="glyphicon-remove" value="glyphicon-remove">remove</option>
-                <option data-icon="glyphicon-zoom-in" value="glyphicon-zoom-in">zoom-in</option>
-                <option data-icon="glyphicon-zoom-out" value="glyphicon-zoom-out">zoom-out</option>
-                <option data-icon="glyphicon-zoom-out" value="glyphicon-zoom-out">zoom-out</option>
-                <option data-icon="glyphicon-off" value="glyphicon-off">off</option>
-                <option data-icon="glyphicon-signal" value="glyphicon-signal">signal</option>
-                <option data-icon="glyphicon-cog" value="glyphicon-cog">cog</option>
-                <option data-icon="glyphicon-trash" value="glyphicon-trash">trash</option>
-                <option data-icon="glyphicon-home" value="glyphicon-home">home</option>
-                <option data-icon="glyphicon-file" value="glyphicon-file">file</option>
-                <option data-icon="glyphicon-time" value="glyphicon-time">time</option>
-                <option data-icon="glyphicon-road" value="glyphicon-road">road</option>
-                <option data-icon="glyphicon-download-alt" value="glyphicon-download-alt">download-alt</option>
-                <option data-icon="glyphicon-download" value="glyphicon-download">download-alt</option>
-                <option data-icon="glyphicon-upload" value="glyphicon-upload">upload</option>
-                <option data-icon="glyphicon-play-circle" value="glyphicon-play-circle">play-circle</option>
-                <option data-icon="glyphicon-repeat" value="glyphicon-repeat">repeat</option>
-                <option data-icon="glyphicon-refresh" value="glyphicon-refresh">refresh</option>
-                <option data-icon="glyphicon-list-alt" value="glyphicon-list-alt">list-alt</option>
-                <option data-icon="glyphicon-lock" value="glyphicon-lock">lock</option>
-                <option data-icon="glyphicon-flag" value="glyphicon-flag">flag</option>
-                <option data-icon="glyphicon-headphones" value="glyphicon-headphones">headphones</option>
-                <option data-icon="glyphicon-qrcode" value="glyphicon-qrcode">qrcode</option>
-                <option data-icon="glyphicon-barcode" value="glyphicon-barcode">barcode</option>
-                <option data-icon="glyphicon-tag" value="glyphicon-tag">tag</option>
-                <option data-icon="glyphicon-tags" value="glyphicon-tags">tags</option>
-                <option data-icon="glyphicon-book" value="glyphicon-book">book</option>
-                <option data-icon="glyphicon-bookmark" value="glyphicon-bookmark">bookmark</option>
-                <option data-icon="glyphicon-print" value="glyphicon-print">print</option>
-                <option data-icon="glyphicon-camera" value="glyphicon-camera">camera</option>
-                <option data-icon="glyphicon-list" value="glyphicon-list">list</option>
-                <option data-icon="glyphicon-indent-left" value="glyphicon-indent-left">indent-left</option>
-                <option data-icon="glyphicon-indent-right" value="glyphicon-indent-right">indent-right</option>
-                <option data-icon="glyphicon-facetime-video" value="glyphicon-facetime-video">facetime-video</option>
-                <option data-icon="glyphicon-picture" value="glyphicon-picture">picture</option>
-                <option data-icon="glyphicon-map-marker" value="glyphicon-map-marker">map-marker</option>
-                <option data-icon="glyphicon-adjust" value="glyphicon-adjust">adjust</option>
-                <option data-icon="glyphicon-tint" value="glyphicon-tint">tint</option>
-                <option data-icon="glyphicon-edit" value="glyphicon-edit">edit</option>
-                <option data-icon="glyphicon-share" value="glyphicon-share">share</option>
-                <option data-icon="glyphicon-check" value="glyphicon-check">check</option>
-                <option data-icon="glyphicon-move" value="glyphicon-move">move</option>
-                <option data-icon="glyphicon-step-backward" value="glyphicon-step-backward">step-backward</option>
-                <option data-icon="glyphicon-fast-backward" value="glyphicon-fast-backward">fast-backward</option>
-                <option data-icon="glyphicon-backward" value="glyphicon-backward">backward</option>
-                <option data-icon="glyphicon-play" value="glyphicon-play">play</option>
-                <option data-icon="glyphicon-pause" value="glyphicon-pause">pause</option>
-                <option data-icon="glyphicon-stop" value="glyphicon-stop">stop</option>
-                <option data-icon="glyphicon-forward" value="glyphicon-forward">forward</option>
-                <option data-icon="glyphicon-fast-forward" value="glyphicon-fast-forward">fast-forward</option>
-                <option data-icon="glyphicon-step-forward" value="glyphicon-step-forward">step-forward</option>
-                <option data-icon="glyphicon-eject" value="glyphicon-eject">eject</option>
-                <option data-icon="glyphicon-screenshot" value="glyphicon-screenshot">screenshot</option>
-                <option data-icon="glyphicon-share-alt" value="glyphicon-share-alt">share-alt</option>
-                <option data-icon="glyphicon-exclamation-sign" value="glyphicon-exclamation-sign">exclamation-sign</option>
-                <option data-icon="glyphicon-gift" value="glyphicon-gift">gift</option>
-                <option data-icon="glyphicon-leaf" value="glyphicon-leaf">leaf</option>
-                <option data-icon="glyphicon-fire" value="glyphicon-fire">fire</option>
-                <option data-icon="glyphicon-eye-open" value="glyphicon-eye-open">eye-open</option>
-                <option data-icon="glyphicon-eye-close" value="glyphicon-eye-close">eye-close</option>
-                <option data-icon="glyphicon-warning-sign" value="glyphicon-warning-sign">warning-sign</option>
-                <option data-icon="glyphicon-plane" value="glyphicon-plane">plane</option>
-                <option data-icon="glyphicon-calendar" value="glyphicon-calendar">calendar</option>
-                <option data-icon="glyphicon-random" value="glyphicon-random">random</option>
-                <option data-icon="glyphicon-comment" value="glyphicon-comment">comment</option>
-                <option data-icon="glyphicon-magnet" value="glyphicon-magnet">magnet</option>
-                <option data-icon="glyphicon-retweet" value="glyphicon-retweet">retweet</option>
-                <option data-icon="glyphicon-shopping-cart" value="glyphicon-shopping-cart">shopping-cart</option>
-                <option data-icon="glyphicon-folder-close" value="glyphicon-folder-close">folder-close</option>
-                <option data-icon="glyphicon-folder-open" value="glyphicon-folder-open">folder-open</option>
-                <option data-icon="glyphicon-hdd" value="glyphicon-hdd">hdd</option>
-                <option data-icon="glyphicon-bullhorn" value="glyphicon-bullhorn">bullhorn</option>
-                <option data-icon="glyphicon-bell" value="glyphicon-bell">bell</option>
-                <option data-icon="glyphicon-certificate" value="glyphicon-certificate">certificate</option>
-                <option data-icon="glyphicon-globe" value="glyphicon-globe">globe</option>
-                <option data-icon="glyphicon-wrench" value="glyphicon-wrench">wrench</option>
-                <option data-icon="glyphicon-send" value="glyphicon-send">send</option>
-                <option data-icon="glyphicon-cutlery" value="glyphicon-cutlery">cutlery</option>
-                <option data-icon="glyphicon-tower" value="glyphicon-tower">tower</option>
-                <option data-icon="glyphicon-grain" value="glyphicon-grain">grain</option>
-                <option data-icon="glyphicon-sunglasses" value="glyphicon-sunglasses">sunglasses</option>
-                <option data-icon="glyphicon-education" value="glyphicon-education">education</option>
-                <option data-icon="glyphicon-ice-lolly-tasted" value="glyphicon-ice-lolly-tasted">ice-lolly-tasted</option>
-                <option data-icon="glyphicon-ice-lolly" value="glyphicon-ice-lolly">ice-lolly</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="link">Lien</label>
-            <input type="text" name="link" id="link" class="text form-control" placeholder="http://youtube.com/w?=qsdqnda ou tout autre lien web valide">
-        </div>
-        <button type="submit" class="btn btn-success form-control">
-            Valider
-        </button>
-    </form>
+    </div>
 </template>
