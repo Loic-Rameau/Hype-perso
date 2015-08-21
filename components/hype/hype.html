@@ -2,7 +2,7 @@
     <div class="content">
         <h2>
             <a href="{{pathFor 'hype.detail' data=getData}}" data-transition-out="slideLeftIn" data-transition-in="slideLeftOut">
-                <span class="{{icon}}" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;{{nom}}
+                <span class="glyphicon {{icon}}" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;{{nom}}
             </a>
             <span style="float:right;">
                 {{#if isLink}}<a href="#" data-hype="{{_id}}" data-link="{{link}}" class="link"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>{{/if}}
