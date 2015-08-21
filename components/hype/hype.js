@@ -10,19 +10,19 @@ if(Meteor.isClient) {
             return this;
         },
         canUp:function(){
-            return this.members.contains(Meteor.userId());
+            return $.inArray(Meteor.userId(),this.members) != -1;
         }
     });
     Template.hype.events({
         "click .update": function (event) {
-            if(!Session.get("preview") && this.members.contains(Meteor.userId())) {
+            if(!Session.get("preview") && $.inArray(Meteor.userId(),this.members) != -1) {
                 Session.set("hype", this);
             }
         },
         "click .link": function (event) {
             var el = $(event.target).parent();
             window.open(el.data("link"));
-            if(!Session.get("preview") && this.members.contains(Meteor.userId())) {
+            if(!Session.get("preview") && $.inArray(Meteor.userId(),this.members) != -1) {
                 Meteor.call("addComment", this.message, this);
             }
         }

@@ -38,7 +38,7 @@ if(Meteor.isClient){
             }
         },
         canUp:function(){
-            return this.members.contains(Meteor.userId());
+            return $.inArray(Meteor.userId(),this.data.members) != -1;
         }
     });
 }

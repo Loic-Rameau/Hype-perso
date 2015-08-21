@@ -8,8 +8,6 @@ if(Meteor.isClient){
             var data = this;
             Meteor.setInterval(function(){
                 moments.set(moment(data).fromNow());
-                console.log(moments);
-                console.log(moments.get());
             },60000);
             return moments.get();
         }
