@@ -41,4 +41,11 @@ if(Meteor.isClient){
             return $.inArray(Meteor.userId(),this.data.members) != -1;
         }
     });
+    Template.hype_table.events({
+        "click .update": function (event) {
+            if (!Session.get("preview") && $.inArray(Meteor.userId(), this.data.members) != -1) {
+                Session.set("hype", this);
+            }
+        }
+    });
 }

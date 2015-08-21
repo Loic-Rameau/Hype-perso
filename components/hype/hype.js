@@ -14,11 +14,6 @@ if(Meteor.isClient) {
         }
     });
     Template.hype.events({
-        "click .update": function (event) {
-            if(!Session.get("preview") && $.inArray(Meteor.userId(),this.members) != -1) {
-                Session.set("hype", this);
-            }
-        },
         "click .link": function (event) {
             var el = $(event.target).parent();
             window.open(el.data("link"));

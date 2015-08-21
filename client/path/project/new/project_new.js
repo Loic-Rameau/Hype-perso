@@ -41,6 +41,7 @@ Template.project_new.events({
         }
     }
 });
+
 Template.project_new.rendered = function(){
     $('#icon').selectpicker();
 };
