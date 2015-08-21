@@ -14,7 +14,13 @@
         {{#each hypes}}
             <div role="tabpanel" class="tab-pane fade in" id="{{_id}}">
                 <h2>Project : {{nom}}</h2>
-
+                <h3>Membres : </h3>
+                <hr>
+                <ul class="list-group">
+                    {{#each getMembers}}
+                    <li class="list-group-item">{{> username user=this}}</li>
+                    {{/each}}
+                </ul>
                 <h3>Candidature : </h3>
                 <hr>
                 <ul class="list-group">

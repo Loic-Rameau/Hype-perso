@@ -12,11 +12,12 @@ Template.project_list.helpers({
     getUser:function(){
         return Meteor.users.findOne({_id:this.user})
     },
-    idAccept:function(){
-
-    },
-    idCancel:function(){
-
+    getMembers:function(){
+        var a = [];
+        this.members.forEach(function(val){
+            a.push(Meteor.users.findOne({_id:val}));
+        });
+        return a;
     }
 });
 
