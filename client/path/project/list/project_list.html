@@ -1,0 +1,41 @@
+<template name="project_list">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+
+        {{#each hypes}}
+            <li role="presentation"><a href="#{{_id}}" aria-controls="{{_id}}" role="tab" data-toggle="tab">{{nom}}</a></li>
+        {{/each}}
+    </ul>
+    <ul>
+
+    </ul>
+
+    <div class="tab-content">
+        {{#each hypes}}
+            <div role="tabpanel" class="tab-pane fade in" id="{{_id}}">
+                <h2>Project : {{nom}}</h2>
+
+                <h3>Candidature : </h3>
+                <hr>
+                <ul class="list-group">
+                    {{#each applayent}}
+                        <li class="list-group-item">
+                            {{> username user=getUser}}
+                            <!-- Split button -->
+                            <div class="btn-group" style="float:right; margin: -7px;">
+                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="accept-candidature">Accepter</a></li>
+                                    <li><a href="#" class="refuse-candidature">Refuser</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}
+    </div>
+</template>

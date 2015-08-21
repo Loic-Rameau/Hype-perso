@@ -46,6 +46,14 @@ if(Meteor.isClient){
             if (!Session.get("preview") && $.inArray(Meteor.userId(), this.data.members) != -1) {
                 Session.set("hype", this);
             }
+        },
+        "click .join":function(){
+            if(!Meteor.user()){
+                $("#myModalJoin").modal('toggle');
+                Router.go("login");
+            } else {
+                Session.set("hype", this);
+            }
         }
     });
 }

@@ -6,7 +6,7 @@
             <th>Nombre</th>
             <th>dernier up</th>
             <th>commentaire</th>
-            <th>Update !</th>
+            <th>Action !</th>
         </tr>
         </thead>
         <tbody>
@@ -37,6 +37,8 @@
             <td>
                 {{#if canUp}}
                     <button type="button" class="btn btn-info update" data-hype="{{_id}}" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-comment"></span></button>
+                {{else}}
+                    <button type="button" class="btn btn-info join" data-hype="{{_id}}" data-toggle="modal" data-target="#myModalJoin"><span class="glyphicon glyphicon-log-in"></span></button>
                 {{/if}}
             </td>
         </tr>

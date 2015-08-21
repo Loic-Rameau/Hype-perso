@@ -1,5 +1,3 @@
-Hypes = new Mongo.Collection("hypes");
-Comments = new Mongo.Collection("comments");
 if (Meteor.isClient) {
     Session.set("hype", Hypes.find({},{sort:{name:-1}}).fetch()[0]);
     Accounts.ui.config({
