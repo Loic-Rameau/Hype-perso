@@ -23,6 +23,11 @@ Template.project_new.events({
         data.forEach(function(val){
             post[val.name] = val.value;
         });
+        if(post.autoComment === undefined) {
+            post.autoComment = false;
+        } else if(post.autoComment === "on") {
+            post.autoComment = true;
+        }
         post.members = [Meteor.userId()];
         Meteor.call("addProject",post);
         Router.go("home");
