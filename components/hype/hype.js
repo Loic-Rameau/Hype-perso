@@ -17,9 +17,9 @@ if(Meteor.isClient) {
         "click .link": function (event) {
             var el = $(event.target).parent();
             window.open(el.data("link"));
-            if(!Session.get("preview") && $.inArray(Meteor.userId(),this.members) != -1) {
-                Meteor.call("addComment", this.message, this);
-            }
+            //if(!Session.get("preview") && $.inArray(Meteor.userId(),this.members) != -1) {
+            //    Meteor.call("addComment", this.message, this);
+            //}
         }
     });
 }
